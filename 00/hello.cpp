@@ -6,7 +6,7 @@
  * Save even more time by using the up arrow to go through your
  * command history. */
 #include <iostream> /* "iostream" is just a C++ file. the #include sticks
-					   the contents here in your file upon compiling. 
+					   the contents here in your file upon compiling.
 					   iostream has some things to make reading and
 					   writing to the screen easier. */
 /* NOTE: stuff between slash-* ... *-slash are not read by
@@ -25,7 +25,7 @@ int main() // <--- your programs will always start here at "main".
 	/* TODO: what happens if you
 	 * 1. put an actual newline instead of "\n"?
 	 * 2. remove the quotes?
-	 * 3. remove the semicolon at the end? 
+	 * 3. remove the semicolon at the end?
 	 * Try each of thse mistakes out and see what the compiler says. */
 	return 0;
 }

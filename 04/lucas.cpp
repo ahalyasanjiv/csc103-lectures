@@ -11,7 +11,7 @@ int main()
 	/* Lucas sequences (of the first kind):
 	 * U_n(P,Q) = P*U_{n-1}(P,Q) - Q*U_{n-2}(P,Q).
 	 * */
-	
+
 	/* first read parameters P and Q: */
 	cout << "Enter P and Q: ";
 	int P,Q;
@@ -21,11 +21,9 @@ int main()
 	int n;
 	while (cin >> n) {
 		/* compute nth term of sequence. */
-		if (n == 0) {
-			cout << 0 << "\n";
-		} else if (n == 1) {
-			cout << 1 << "\n";
-		} else {
+		if (n == 0 || n==1) {
+			cout << n << "\n";
+		else {
 			int a0 = 0; /* term two before current */
 			int a1 = 1; /* term one before current */
 			/* use n as a counter: */
@@ -40,10 +38,9 @@ int main()
 			cout << a1 << "\n";
 		}
 		/* TODO: delete this whole thing and write it from scratch. */
+
 		/* TODO: while you're at it, simplify this.
 		 * You don't need the "else if" block. */
-	}
-
 	return 0;
 }
 

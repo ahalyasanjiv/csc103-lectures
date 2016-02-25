@@ -12,6 +12,41 @@ using std::string;
 
 int main()
 {
+	//todo
+	int nth;
+	cout<<"enter n for fib sequence \n";
+	cin>>nth;
+	if (nth==0){
+		cout<<0<<endl;
+	}
+	else if (nth==1){
+		cout<<1<<endl;
+	}
+	else {
+		int count2=2;
+		int a0=0;
+		int a1=1;
+		while (count2<nth){
+				int next=a0+a1;
+				a0=a1;
+				a1=next;
+				count2++;
+		}
+		cout<<"The "<<nth<<"th term was "<<a1<<endl;
+	}
+
+	int num;
+	int count1=1;
+	int add=0;
+	cout<<"enter number:";
+	cin>>num;
+	while (count1<=num) {
+		add+= count1*count1*count1;
+		count1++;
+	}
+	cout<<"sum is "<<add<<endl;
+
+
 	/* a slight generalization of an earlier exercise:
 	 * for integers n and k, determine the largest power
 	 * of k that divides n. */
@@ -56,11 +91,18 @@ int main()
 			break; /* gcd contains the answer. */
 		gcd--; /* preserve meaning of the variable. */
 	}
+
+	cout << "gcd was " << gcd << "\n";
+
+	while (n%gcd!=0 && k%gcd!=0){
+		gcd--;
+	}
+
 	cout << "gcd was " << gcd << "\n";
 	/* TODO: rewrite the above without while(true) (or while(1) etc...)
 	 * and without a break statement.  Just replace the 'true' with
 	 * the negation of the condition that breaks the loop! */
-	
+
 
 	/* exercise: brute force test for perfect cubes.  Check if
 	 * n = k^3 for some integer k.  */
@@ -112,6 +154,10 @@ int main()
 		count++;
 		sum += n;
 	}
+	cout<<"max was "<<max<<endl;
+	cout<<"min was "<<min<<endl;
+	cout<<"average was "<<double(sum)/count<<endl;
+
 	/* TODO: print answer.  Be sure to use a typecast in the division,
 	 * else you'll lose the fractional part of the average. */
 

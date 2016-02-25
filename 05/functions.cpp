@@ -61,27 +61,41 @@ double h(double& x) {
 	 * */
 }
 
+double f1(int n1, int n2, int n3){
+    int max=n1;
+    if (n2>max)
+      max=n2;
+    if (n3>max)
+      max=n3;
+    return max;
+  }
 
 int main()
 {
+
 	/* HOW TO CALL? */
-	cout << f(3) << "\n";
+	cout << f1(3,6,9) << "\n";
 
 	/* BY VALUE VS BY REFERENCE */
 	double a = 3;
-	cout << "g(a) = " << g(a) << "\n";
+	/*cout << "g(a) = " << g(a) << "\n";
 	cout << "a = " << a << "\n";
 	cout << "h(a) = " << h(a) << "\n";
-	cout << "a = " << a << "\n";
+	cout << "a = " << a << "\n";*/
 	/* looks like x in g(...) was a COPY of a.  NOTE:
 	 * you can make them share memory if you want...
 	 * */
+
+
+
+
 
 	return 0;
 }
 
 /* TODO: write a function that takes 3 integers and returns
  * the maximal value */
+
 
 /* TODO: write a function that takes 3 doubles and returns the average value.
  * also write code in main to test it.  */
@@ -104,3 +118,5 @@ int main()
  * log(n) steps!  To find it, you'll probably need a hint or two to even get
  * started.  Ask me if you're interested.
  * */
+
+
